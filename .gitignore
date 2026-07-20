@@ -1,0 +1,14 @@
+﻿# Build / IDE
+**/out/
+**/*.class
+.idea/
+*.iml
+.vscode/
+
+# Local evidence — keep on laptop only
+notes/screenshots/
+
+# Secrets — never commit
+.env
+**/kubeconfig*
+**/*secret*
