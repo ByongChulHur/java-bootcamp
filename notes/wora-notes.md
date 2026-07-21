@@ -1,3 +1,3 @@
 javac compiled Hello.java into Hello.class, which is bytecode instead of native machine code.
-When I ran java Hello again without recompiling, it still printed "Hello, JVM!" — this proves the JVM executes the bytecode file directly, not the original .java source.
+When I ran java Hello again without recompiling, it still printed "Hello, JVM!". I believe that this shows the JVM executes the bytecode file directly instead of using the .java source.
 Because the .class file is not tied to a specific OS, any machine with a compatible JVM installed can run the exact same bytecode without changing or recompiling the source. This is what "Write Once, Run Anywhere" means.
