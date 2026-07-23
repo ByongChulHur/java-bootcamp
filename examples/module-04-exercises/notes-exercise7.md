@@ -1,0 +1,1 @@
+Use StringBuilder when constructing text repeatedly in a loop. Ordinary + remains readable and appropriate for a small, fixed expression.
