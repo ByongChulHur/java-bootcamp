@@ -1,0 +1,34 @@
+Reflection Questions
+
+1. What are the advantages of Streams over loops?
+I personally think stream is more short and readable than loop and this is big advantage. In loop I need to write every step by myself and it make code long, but in stream I just write what I want and stream handle rest of things. Also stream can change to parallel stream easy but loop cannot do this easy.
+
+2. When should Streams be preferred?
+Stream is better when task is filtering, mapping, or grouping data and this happen a lot in this lab. However loop still better when logic need more control, like early exit that stream cannot really do easy.
+
+3. What is the difference between filter() and map()?
+Filter keep same type but element count can decrease, because it use Predicate and return true or false for each element. Map can change type but element count stay same, for example Employee change to String name and count don't change.
+
+4. Why is reduce() useful?
+Reduce useful because it can combine all element into one value and I don't need write loop and variable myself for track the result. Also sum(), max(), min() is basically reduce inside them, even how they look different on surface.
+
+5. What does Collectors.groupingBy() do?
+It split stream into Map by some key, for example department in this lab. If I add second collector like counting(), then value become count number instead of full list of employee.
+
+6. What is the benefit of using Optional?
+Optional make me to handle case when value not exist, instead of get null and NullPointerException later when I not expect it. For example ifPresentOrElse let me write both case clearly in one place.
+
+7. Why are Lambda Expressions more readable?
+Lambda remove all the anonymous class boilerplate code that we don't really need. For example employee -> employee.getSalary() > 100_000 much shorter than write new Predicate() {...} block with override method inside.
+
+8. When should method references be used?
+Method reference good when lambda only call one method and nothing else, like Employee::getName for example. But if lambda need compare something or combine string together, then I need normal lambda instead because method reference cannot do that.
+
+9. Which stream operation is terminal? Give three examples from your lab.
+Terminal operation is the one that actually execute whole pipeline. In my lab I use forEach(), count(), and collect() and all three is terminal operation.
+
+10. How do Streams improve enterprise Java applications?
+Stream give same style like filter/map/collect for different data source and because of this reasons code become more consistent across whole codebase. Also parallel stream help performance for big data situation.
+
+11. (Forward look) How would a future CRM use filter / map / groupingBy on customers the same way this lab uses them on employees?
+I think CRM can use filter for finding active customer, map for making summary view of customer, and groupingBy for group customer by region same way this lab group employee by department. Because of these reasons, same stream pattern from this lab can reuse later, just change Employee to Customer and logic mostly stay same.
