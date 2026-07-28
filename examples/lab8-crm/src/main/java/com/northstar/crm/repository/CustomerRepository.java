@@ -6,8 +6,6 @@ import java.util.Optional;
 /**
  * Persistence boundary. Lab 8: stub only.
  * Later: in-memory List, then JPA/PostgreSQL.
- *
- * TODO: do NOT import controller or dto — only entity (+ JDK).
  */
 public class CustomerRepository {
 
