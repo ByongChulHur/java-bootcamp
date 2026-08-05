@@ -1,0 +1,19 @@
+server.port: 8080
+spring.application.name: lab21-crm
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,info
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,crmReadinessIndicator
+  metrics:
+    tags:
+      application: northstar-crm
