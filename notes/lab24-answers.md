@@ -1,0 +1,3 @@
+1. Contract-first mattered most — writing the XSD first kept the WSDL, generated types, and @PayloadRoot names always in sync with the partner contract..
+2. Updating CUS-1002 via SOAP and immediately seeing the same change through REST proved both protocols share one CustomerService and one data store.
+3. The missing-UsernameToken failure was hardest to diagnose, since it was rejected silently by the security interceptor before ever reaching CustomerEndpoint's logic.
