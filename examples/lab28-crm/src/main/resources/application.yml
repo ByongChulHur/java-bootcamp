@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: northstar-crm
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+northstar:
+  security:
+    jwt-secret: ${JWT_SECRET:lab-only-4fa7dc3c18a575e3e520073f21b1e1f5f131d0f299249a88f78b969eacf0b998}
+
+logging:
+  level:
+    org.springframework.security: DEBUG
