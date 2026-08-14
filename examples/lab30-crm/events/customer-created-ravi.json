@@ -1,0 +1,10 @@
+{
+  "eventId": "9b399d8f-8beb-40d8-a573-a5c8cf67671f",
+  "eventType": "CustomerCreated",
+  "eventVersion": 1,
+  "occurredAt": "2026-07-13T06:05:00Z",
+  "customerId": "CUS-1002",
+  "correlationId": "lab-request-001",
+  "source": "customer-service",
+  "data": { "fullName": "Ravi Singh", "status": "PROSPECT" }
+}
